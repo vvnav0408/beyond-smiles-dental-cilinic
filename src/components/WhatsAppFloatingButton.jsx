@@ -3,7 +3,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import './WhatsAppFloatingButton.css';
 
 const WhatsAppFloatingButton = () => {
-    const phoneNumber = '07736180080';
+    const phoneNumber = '+917736180080';
     const defaultMessage = encodeURIComponent('Hello Dr. Arya, I would like to book an appointment.');
 
     return (

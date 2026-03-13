@@ -1,31 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 import './AppointmentBooking.css';
 
-const doctorsList = [
-    { id: 1, name: "Dr. Arya Aravindakshan" },
-    { id: 2, name: "Dr. Jithin. C.N" },
-    { id: 3, name: "Dr. Riswana Nazar" },
-    { id: 4, name: "Dr. Paul Pritam. M" },
-    { id: 5, name: "Dr. Suchitra Vijay" },
-    { id: 6, name: "Dr. Prasad Menon" },
-    { id: 7, name: "Dr. Padmapriya. S" },
-    { id: 8, name: "Dr. Ajith PS" },
-    { id: 9, name: "Dr. Aswin Prasad S" },
-    { id: 10, name: "Dr. Raneesh K E" }
-];
-
 const AppointmentBooking = () => {
-    const location = useLocation();
-    const queryParams = new URLSearchParams(location.search);
-    const preSelectedDoctor = queryParams.get('doctor');
-
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
         email: '',
-        doctor: preSelectedDoctor || '',
         date: '',
         time: '',
         message: ''
@@ -48,14 +29,14 @@ const AppointmentBooking = () => {
         // Simulate API call
         setTimeout(() => {
             setIsSubmitted(true);
-            setFormData({ name: '', phone: '', email: '', doctor: '', date: '', time: '', message: '' });
+            setFormData({ name: '', phone: '', email: '', date: '', time: '', message: '' });
         }, 1500);
     };
 
     const handleWhatsAppBooking = () => {
-        const text = `Hello Beyond Smiles Dentistry,\nI would like to book an appointment.\nName: ${formData.name}\nPhone: ${formData.phone}\nDoctor: ${doctorsList.find(d => d.id == formData.doctor)?.name || 'Any'}\nDate: ${formData.date}\nTime: ${formData.time}\nMessage: ${formData.message}`;
+        const text = `Hello Beyond Smiles Dentistry,\nI would like to book an appointment.\nName: ${formData.name}\nPhone: ${formData.phone}\nDate: ${formData.date}\nTime: ${formData.time}\nMessage: ${formData.message}`;
         const encodedText = encodeURIComponent(text);
-        window.open(`https://wa.me/07736180080?text=${encodedText}`, '_blank');
+        window.open(`https://wa.me/+917736180080?text=${encodedText}`, '_blank');
     };
 
     return (
@@ -85,23 +66,14 @@ const AppointmentBooking = () => {
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="phone">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required placeholder="07736180080" />
+                                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required placeholder="+917736180080" />
                                 </div>
                             </div>
 
                             <div className="form-row">
-                                <div className="form-group">
+                                <div className="form-group" style={{ width: '100%' }}>
                                     <label htmlFor="email">Email Address</label>
                                     <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="john@example.com" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="doctor">Preferred Doctor</label>
-                                    <select id="doctor" name="doctor" value={formData.doctor} onChange={handleChange}>
-                                        <option value="">Any Available Doctor</option>
-                                        {doctorsList.map(doc => (
-                                            <option key={doc.id} value={doc.id}>{doc.name}</option>
-                                        ))}
-                                    </select>
                                 </div>
                             </div>
 

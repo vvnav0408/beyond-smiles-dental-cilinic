@@ -1,0 +1,324 @@
+/* Home CSS */
+.hero {
+    position: relative;
+    height: 85vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&q=80&w=1920&h=1080');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.size-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.hero-outline {
+    border-color: var(--color-text-main);
+    color: var(--color-text-main);
+}
+
+.hero-outline:hover {
+    background-color: var(--color-text-main);
+    color: var(--color-white);
+    border-color: var(--color-text-main);
+}
+
+/* About Section */
+.text-left {
+    text-align: left;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-image-wrapper:hover .about-img {
+    transform: scale(1.05);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-main);
+    font-weight: 500;
+}
+
+.feature-icon {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+    align-self: flex-start;
+}
+
+/* Doctors Section */
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.doctor-card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.doctor-img-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+
+.doctor-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.doctor-card:hover .doctor-img {
+    transform: scale(1.05);
+}
+
+.doctor-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.doctor-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.specialization {
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.doctor-info p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.view-profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-main);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color var(--transition-fast);
+}
+
+.doctor-card:hover .view-profile-btn {
+    color: var(--color-primary);
+}
+
+/* Reviews Section */
+.reviews-section {
+    background-color: var(--color-background);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: 2rem;
+}
+
+.review-card {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid #4285F4;
+    /* Google Blue Accent */
+    transition: transform var(--transition-normal);
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.review-header h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.stars {
+    color: #FBBC05;
+    /* Google Yellow */
+    font-size: 1.1rem;
+}
+
+.review-card p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    font-style: italic;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.google-source {
+    font-size: 0.8rem;
+    color: #9AA0A6;
+    text-align: right;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.25rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
+    }
+}

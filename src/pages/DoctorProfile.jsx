@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FiClock, FiAward, FiStar, FiCalendar } from 'react-icons/fi';
 import './DoctorProfile.css';
+import profilePlaceholder from '../assets/profile-placeholder.svg';
 
 const doctorsData = [
     {
@@ -11,7 +12,7 @@ const doctorsData = [
         qualifications: "BDS",
         experience: "15+ Years Experience",
         biography: "Dr. Arya Aravindakshan is the founder and chief dentist at Beyond Smiles Dentistry. She is committed to continuing education and uses the latest technology to provide optimal care for her patients.",
-        image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600&h=600",
+        image: profilePlaceholder,
         timings: "Mon-Sat: 9:00 AM - 1:00 PM, 4:00 PM - 8:00 PM",
         expertise: ["General Dentistry", "Smile Makeovers", "Full Mouth Rehab"]
     },
@@ -22,7 +23,7 @@ const doctorsData = [
         qualifications: "MDS",
         experience: "10+ Years Experience",
         biography: "Dr. Jithin C.N is a highly skilled orthodontist with a passion for creating perfect smiles.",
-        image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600&h=600",
+        image: profilePlaceholder,
         timings: "Call for Appointments",
         expertise: ["Orthodontics", "Clear Aligners", "Traditional Braces"]
     },
@@ -33,7 +34,7 @@ const doctorsData = [
         qualifications: "MDS",
         experience: "Expertise in teeth alignment",
         biography: "Dr. Riswana Nazar specializes in clear aligners and modern orthodontic care.",
-        image: "https://images.unsplash.com/photo-1594824432135-e10db8d69781?auto=format&fit=crop&q=80&w=600&h=600",
+        image: profilePlaceholder,
         timings: "Call for Appointments",
         expertise: ["Orthodontics", "Clear Aligners", "Braces"]
     },
@@ -44,7 +45,7 @@ const doctorsData = [
         qualifications: "MDS",
         experience: "Expert in root canal procedures",
         biography: "Dr. Paul Pritam M is a skilled Endodontist specializing in painless root canal treatments.",
-        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=600&h=600",
+        image: profilePlaceholder,
         timings: "Call for Appointments",
         expertise: ["Endodontics", "Root Canal Treatment", "Pulp Therapy"]
     },
@@ -55,7 +56,7 @@ const doctorsData = [
         qualifications: "BDS, PG Diploma (Endo)",
         experience: "Expert in root canal procedures",
         biography: "Dr. Suchitra Vijay relies on modern endodontic techniques to save natural teeth.",
-        image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=600&h=600",
+        image: profilePlaceholder,
         timings: "Call for Appointments",
         expertise: ["Endodontics", "Root Canal Treatment"]
     },
@@ -66,7 +67,7 @@ const doctorsData = [
         qualifications: "MDS, DNB",
         experience: "Expert in missing teeth replacement",
         biography: "Dr. Prasad Menon is a highly skilled Prosthodontist for crowns, bridges, and dentures.",
-        image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600&h=600",
+        image: profilePlaceholder,
         timings: "Call for Appointments",
         expertise: ["Prosthodontics", "Crowns & Bridges", "Dentures"]
     },
@@ -77,7 +78,7 @@ const doctorsData = [
         qualifications: "MDS",
         experience: "Expert in pediatric dentistry",
         biography: "Dr. Padmapriya S specializes in providing a comfortable dental experience for children.",
-        image: "https://images.unsplash.com/photo-1594824432135-e10db8d69781?auto=format&fit=crop&q=80&w=600&h=600",
+        image: profilePlaceholder,
         timings: "Call for Appointments",
         expertise: ["Pedodontics", "Preventive Dentistry for Children"]
     },
@@ -88,7 +89,7 @@ const doctorsData = [
         qualifications: "MDS",
         experience: "Expert in gum care and implants",
         biography: "Dr. Ajith PS focuses on periodontal health to ensure a strong foundation for your teeth.",
-        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=600&h=600",
+        image: profilePlaceholder,
         timings: "Call for Appointments",
         expertise: ["Periodontics", "Gum Surgeries", "Scaling & Root Planing"]
     },
@@ -99,7 +100,7 @@ const doctorsData = [
         qualifications: "MDS",
         experience: "Expert in gum care and implants",
         biography: "Dr. Aswin Prasad S provides specialized periodontal treatments for complex cases.",
-        image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600&h=600",
+        image: profilePlaceholder,
         timings: "Call for Appointments",
         expertise: ["Periodontics", "Advanced Gum Care"]
     },
@@ -110,7 +111,7 @@ const doctorsData = [
         qualifications: "MDS",
         experience: "Expert in Oral Surgery",
         biography: "Dr. Raneesh K E is a skilled surgeon dealing with complex facial and dental surgical needs.",
-        image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600&h=600",
+        image: profilePlaceholder,
         timings: "Call for Appointments",
         expertise: ["Oral Maxillofacial Surgery", "Wisdom Tooth Extraction", "Implants"]
     }
@@ -189,15 +190,6 @@ const DoctorProfile = () => {
                                     <li key={index}>{item}</li>
                                 ))}
                             </ul>
-                        </div>
-
-                        <div className="reviews-preview mt-4">
-                            <h3>Patient Testimonials</h3>
-                            <div className="testimonial-card">
-                                <div className="stars">★★★★★</div>
-                                <p>"An amazing experience. {doctor.name} was incredibly gentle and explained every step of the procedure perfectly. Highly recommended!"</p>
-                                <p className="author">- Verified Patient</p>
-                            </div>
                         </div>
                     </div>
                 </div>

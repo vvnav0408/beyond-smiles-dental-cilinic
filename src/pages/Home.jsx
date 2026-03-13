@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import { FiArrowRight, FiCheckCircle } from 'react-icons/fi';
+import profilePlaceholder from '../assets/profile-placeholder.svg';
 
 const doctors = [
     {
@@ -9,70 +10,70 @@ const doctors = [
         name: "Dr. Arya Aravindakshan",
         specialization: "BDS, Chief Dental Surgeon",
         description: "Chief Dental Surgeon.",
-        image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400&h=400"
+        image: profilePlaceholder
     },
     {
         id: 2,
         name: "Dr. Jithin. C.N",
         specialization: "MDS, Orthodontist",
         description: "Specializing in Orthodontics.",
-        image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400&h=400"
+        image: profilePlaceholder
     },
     {
         id: 3,
         name: "Dr. Riswana Nazar",
         specialization: "MDS, Orthodontist",
         description: "Specializing in Orthodontics.",
-        image: "https://images.unsplash.com/photo-1594824432135-e10db8d69781?auto=format&fit=crop&q=80&w=400&h=400"
+        image: profilePlaceholder
     },
     {
         id: 4,
         name: "Dr. Paul Pritam. M",
         specialization: "MDS, Endodontist",
         description: "Specializing in Endodontics.",
-        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400&h=400"
+        image: profilePlaceholder
     },
     {
         id: 5,
         name: "Dr. Suchitra Vijay",
         specialization: "BDS, PG Diploma (Endo)",
         description: "Specializing in Endodontics.",
-        image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=400&h=400"
+        image: profilePlaceholder
     },
     {
         id: 6,
         name: "Dr. Prasad Menon",
         specialization: "MDS, DNB Prosthodontist",
         description: "Specializing in Prosthodontics.",
-        image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400&h=400"
+        image: profilePlaceholder
     },
     {
         id: 7,
         name: "Dr. Padmapriya. S",
         specialization: "MDS, Pedodontist",
         description: "Specializing in pediatric dentistry.",
-        image: "https://images.unsplash.com/photo-1594824432135-e10db8d69781?auto=format&fit=crop&q=80&w=400&h=400"
+        image: profilePlaceholder
     },
     {
         id: 8,
         name: "Dr. Ajith PS",
         specialization: "MDS, Periodontist",
         description: "Specializing in Periodontics.",
-        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400&h=400"
+        image: profilePlaceholder
     },
     {
         id: 9,
         name: "Dr. Aswin Prasad S",
         specialization: "MDS, Periodontist",
         description: "Specializing in Periodontics.",
-        image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400&h=400"
+        image: profilePlaceholder
     },
     {
         id: 10,
         name: "Dr. Raneesh K E",
         specialization: "MDS, Oral Maxillofacial Surgeon",
         description: "Specializing in Oral Maxillofacial Surgery.",
-        image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400&h=400"
+        image: profilePlaceholder
     }
 ];
 
@@ -153,46 +154,19 @@ const Home = () => {
 
             {/* Google Reviews Section */}
             <section className="reviews-section section">
-                <div className="container">
-                    <h2 className="section-title">What Our Patients Say</h2>
-                    <p className="section-subtitle">Read real stories from our satisfied patients.</p>
+                <div className="container" style={{ textAlign: 'center' }}>
+                    <h2 className="section-title">Patient Reviews</h2>
+                    <p className="section-subtitle">Read real reviews from our patients on Google.</p>
 
-                    <div className="reviews-grid">
-                        <div className="review-card">
-                            <div className="review-header">
-                                <div className="reviewer-avatar">S</div>
-                                <div>
-                                    <h4>Sanya Menon</h4>
-                                    <div className="stars">★★★★★</div>
-                                </div>
-                            </div>
-                            <p>"Absolutely wonderful experience. Dr. Arya is incredibly patient and the clinic is spotless. The root canal was completely painless!"</p>
-                            <div className="google-source">Posted on Google</div>
-                        </div>
-
-                        <div className="review-card">
-                            <div className="review-header">
-                                <div className="reviewer-avatar">A</div>
-                                <div>
-                                    <h4>Arjun Nair</h4>
-                                    <div className="stars">★★★★★</div>
-                                </div>
-                            </div>
-                            <p>"The best pediatric dentist in Palakkad! Dr. Sneha made my daughter feel so comfortable. We finally found a dentist my child isn't afraid of."</p>
-                            <div className="google-source">Posted on Google</div>
-                        </div>
-
-                        <div className="review-card">
-                            <div className="review-header">
-                                <div className="reviewer-avatar">M</div>
-                                <div>
-                                    <h4>Meena Kumar</h4>
-                                    <div className="stars">★★★★★</div>
-                                </div>
-                            </div>
-                            <p>"Got my aligners from Dr. Rohan. The whole process is seamless and the staff is very professional. Highly recommend this place."</p>
-                            <div className="google-source">Posted on Google</div>
-                        </div>
+                    <div style={{ marginTop: '2rem' }}>
+                        <a
+                            href="https://www.google.com/maps?q=Dr.Arya%E2%80%99s+Beyond+Smiles+Dentistry,+Yakkara+junction,+post,+West+Yakkara,+Palakkad,+Kannadi-II,+Kerala+678701"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-primary size-lg"
+                        >
+                            View Reviews on Google
+                        </a>
                     </div>
                 </div>
             </section>

@@ -25,7 +25,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3>Clinic Address</h3>
-                                <p>Yakkara junction, post, West Yakkara<br />Palakkad, Kannadi-II, Kerala 678701</p>
+                                <p>Dr.Arya’s Beyond Smiles Dentistry,<br />Yakkara junction, post, West Yakkara,<br />Palakkad, Kannadi-II, Kerala 678701</p>
                             </div>
                         </div>
 
@@ -35,7 +35,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3>Phone Number</h3>
-                                <p>+91 98765 43210<br />+91 491 2345678</p>
+                                <p>07736180080</p>
                             </div>
                         </div>
 
@@ -66,7 +66,7 @@ const Contact = () => {
                         <div className="map-wrapper">
                             <iframe
                                 title="Dr. Arya's Beyond Smiles Dentistry Location"
-                                src="https://www.google.com/maps?q=Yakkara+junction,+post,+West+Yakkara,+Palakkad,+Kannadi-II,+Kerala+678701&output=embed"
+                                src="https://www.google.com/maps?q=Dr.Arya%E2%80%99s+Beyond+Smiles+Dentistry,+Yakkara+junction,+post,+West+Yakkara,+Palakkad,+Kannadi-II,+Kerala+678701&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

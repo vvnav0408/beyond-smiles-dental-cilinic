@@ -55,7 +55,7 @@ const AppointmentBooking = () => {
     const handleWhatsAppBooking = () => {
         const text = `Hello Beyond Smiles Dentistry,\nI would like to book an appointment.\nName: ${formData.name}\nPhone: ${formData.phone}\nDoctor: ${doctorsList.find(d => d.id == formData.doctor)?.name || 'Any'}\nDate: ${formData.date}\nTime: ${formData.time}\nMessage: ${formData.message}`;
         const encodedText = encodeURIComponent(text);
-        window.open(`https://wa.me/+919876543210?text=${encodedText}`, '_blank');
+        window.open(`https://wa.me/07736180080?text=${encodedText}`, '_blank');
     };
 
     return (
@@ -85,7 +85,7 @@ const AppointmentBooking = () => {
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="phone">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required placeholder="+91 9876543210" />
+                                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required placeholder="07736180080" />
                                 </div>
                             </div>
 

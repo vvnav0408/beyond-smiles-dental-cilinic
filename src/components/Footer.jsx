@@ -40,7 +40,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <FiPhone className="contact-icon" />
-                            <span>+91 98765 43210</span>
+                            <span>07736180080</span>
                         </li>
                         <li>
                             <FiMail className="contact-icon" />
